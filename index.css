@@ -11,9 +11,24 @@
 
 #search-form {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
 }
 
 .results-area {
     display: none;
+}
+
+label,
+input {
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+#limit-select {
+    width: 40px;
+}
+
+#error-message {
+    margin-top: 60px;
+    color: red;
 }

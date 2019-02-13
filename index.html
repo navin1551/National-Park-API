@@ -10,20 +10,20 @@
         <div class="container">
             <section class="search-area">
                 <h2>Search national parks by state</h2>
-                <form id="search-form">
+                <form id="search-form" method="GET">
                     <label for="select state">Select state</label>
                     <input id="state-select" type="text">
-                    <label for="search result limits">Max results</label>
-                    <input id="limit-select" type="number">
-                    <button type="submit">Search</button>
+                    <label for="result limits">Max results</label>
+                    <input id="limit-select" type="number" value="3">
+                    <input type="submit" value="Search">
                 </form>
                 <h1 id="error-message"></h1>
             </section>
             <section class="results-area">
                 <h2>Results</h2>
                 <div>
-                    <ul>
-
+                    <ul class="results-list">
+                       
                     </ul>
                 </div>
             </section>
