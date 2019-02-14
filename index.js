@@ -35,6 +35,7 @@ function getParkInfo(query, limit) {
 
     fetch(url)
         .then(response => {
+            console.log(response.statusText);
             if (response.ok) {
                 return response.json();
             }
@@ -54,7 +55,8 @@ function getParkInfo(query, limit) {
 //function to display search results to DOM
 function displayResults(responseJson) {
     $('.results-list').empty();
-    if (responseJson.data.length > 0) {
+    $('#error-message').empty();
+    if (responseJson.data.length > 0 && responseJson.total !== 496) {
         for (let i = 0; i < responseJson.data.length; i++) {
             $('.results-list').append(
                 `<li><h3>${responseJson.data[i].fullName}</h3>
