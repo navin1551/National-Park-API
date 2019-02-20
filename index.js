@@ -26,7 +26,7 @@ function formatQueryParams(params){
 //function to retrieve data using parameters 
 function getParkInfo(query, limit) {
     const params = {
-        q: query,
+        stateCode: query,
         key: apiKey,
         limit
     };
